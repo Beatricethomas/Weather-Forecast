@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.content {
+    width: 80%;
+    padding: 20px;
+}
+
+.content-header {
+    margin-bottom: 20px;
+}
+
+.content-body {
+    padding: 20px;
+    border: 1px solid #ddd;
+    min-height: calc(100vh - 80px); /* Adjust for header height */
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%);  /* Initially hidden off-screen */
+}
+
+.content-body.active {
+    transform: translateX(0);  /* Slide in content on click */
+}
